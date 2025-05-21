@@ -12,7 +12,7 @@ browser=webdriver.Chrome(options=opzioni)
 browser.get('https://mivv.com/')
 time.sleep(3)
 numero_marche=len(browser.find_element(By.ID,'marca_moto').find_elements(By.TAG_NAME,'option'))
-for i in range(24,numero_marche): # CAMBIA CON 1 SE VUOI FARE RIPARTIRE --> SI ERA BLOCCATO A MV AUGUSTA
+for i in range(1,numero_marche):
  try:
   marchio_moto=browser.find_element(By.ID,'marca_moto').find_elements(By.TAG_NAME,'option')[i].get_attribute('innerText')
   id_moto=browser.find_element(By.ID,'marca_moto').find_elements(By.TAG_NAME,'option')[i].get_attribute('value')
